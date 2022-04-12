@@ -10,12 +10,14 @@ const scissors_div = document.getElementById("scissors");
 const lizard_div = document.getElementById("lizard");
 const spock_div = document.getElementById("spock");
 
+//Creates Random Computer Choice
 function getComputerChoice(){
     const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
     const randomNumber = (Math.floor(Math.random() * 5));
     return choices[randomNumber];
 }
 
+// Increases user score after winning and adds green glow effect
 function win(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
@@ -24,6 +26,7 @@ function win(userChoice, computerChoice){
     setTimeout(()=> document.getElementById(userChoice).classList.remove('green-glow'), 400);
 }
 
+// Increases computer score after losing and adds red glow effect
 function lose(userChoice, computerChoice){
     computerScore++;
     computerScore_span.innerHTML = computerScore;
@@ -32,12 +35,14 @@ function lose(userChoice, computerChoice){
     setTimeout(()=> document.getElementById(userChoice).classList.remove('red-glow'), 400);
 }
 
+// Shows message and adds yellow glow effect
 function draw(userChoice){
     result_p.innerHTML = "It's a draw!"
     document.getElementById(userChoice).classList.add('yellow-glow');
     setTimeout(()=> document.getElementById(userChoice).classList.remove('yellow-glow'), 400);
 }
 
+//Checks choices to decide the winner
 function game(userChoice){
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice){
@@ -76,6 +81,7 @@ function game(userChoice){
     
 }
 
+//Starts the ClickEventListeners for the choices
 function main(){
     rock_div.addEventListener('click', () => game("rock"));
     

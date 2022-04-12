@@ -8,6 +8,8 @@
 body{
     background-color: #24272E;
 }
+
+/*Game Header*/
 header{
     background: white;
     padding: 20px;
@@ -16,6 +18,8 @@ header > h1 {
     color: #25272E;
     text-align: center;
 }
+
+/*Score Board*/
 .score-board{
     margin: 20px auto;
     border: 3px solid white;
@@ -43,6 +47,8 @@ header > h1 {
     top: 30px;
     right: -45px;
 }
+
+/*Result Text*/
 .result{
     font-size: 40px;
     color: white;
@@ -51,6 +57,8 @@ header > h1 {
     text-align: center;
     font-weight: bold;
 }
+
+/*Move Choices*/
 .choices{
     text-align: center;
 }
@@ -69,6 +77,8 @@ header > h1 {
     width: 150px; 
     height: 150px;
 }
+
+/*Action Message*/
 #action-message{
     text-align: center;
     color: white;
@@ -76,6 +86,8 @@ header > h1 {
     font-size: 24px;
     margin-top: 20px;
 }
+
+/*Border Glow Effects after round*/
 .green-glow{
     border: 4px solid #43A047;
     box-shadow: 0 0 10px #2E7D32;
